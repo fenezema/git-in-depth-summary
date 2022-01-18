@@ -20,6 +20,13 @@ Mainly because, let's say that developer Fabs is working on Feature A, while dev
 
 We can create a new branch by typing this particular command on our holy terminal
 
-`git branch -b <branch name>`
+`git checkout -b <branch name>`
+
+<img src="./assets/git-gicnew.png" width="50%">
 
 This command will create a new branch with the parent commit of the current commit/HEAD for that matters. 
+
+### Tags and Annotated Tags
+Tags and Annotated Tags are another symlinks like references, that reference to a commit. Tagging without arguments resulting in what Git called lighttag. This tag will take the current HEAD and point it with our desired name. The only different to Annotated Tag is that Annotated Tag will include some metadata like the tagger and the date.
+
+**NB : we can list all tags we have by typing `git tag` command. There are a few flags that can be added for git tag command, like --points-at to get the commit the tags pointing at.**
