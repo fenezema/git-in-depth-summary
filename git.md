@@ -1,4 +1,4 @@
-# Git - That One Friend You Interact with Everyday
+# (Section 1) Git - That One Friend/Foe You Interact with Everyday
 
 ## Super Brief Introductory
 Developed by Linus Torvalds himself and several maintainers for Linux Kernel development in 2005 as the source code management with BitKeeper, but not so BitKeeper in mind.
@@ -11,7 +11,7 @@ Developed by Linus Torvalds himself and several maintainers for Linux Kernel dev
 <hr>
 
 ## Foundations
-In its foundation, Git is almost like a key-value store. In that manner, the key is a [SHA1](google.com), and the value can be either a tree, a blob, or a commit.
+In its foundation, Git is almost like a key-value store. In that manner, the key is a [SHA1](https://en.wikipedia.org/wiki/SHA-1), and the value can be either a tree, a blob, or a commit.
 All of this informations is stored in a directory called `.git`
 One command line to actually pop this directory out in the wild (in your current local repo for this matter) is `git init`
 
@@ -81,6 +81,7 @@ instead of
 This design basically allowed us to add anything that we need only, to be added to the Staging Area. Or maybe, in some scenario, you want to add other modified file, right after you `git add <path>`. This also can be done by this git design.
 
 **NB : we can use `git restore --staged <path>` to restore anything that already in Staging Area to Working Area if you ever actually need this (*wink-wink)**
+**Super NB : `git restore --staged <path>` were introduced in git v2.23.0. Please make sure that your git version match, or higher than v2.23.0 if you want to utilize this command**
 
 ### Repo
 Repo is the last resort (sort of) once everything that we staged to Staging Area by doing commit. This is where everything resides. 
@@ -88,3 +89,8 @@ Repo is the last resort (sort of) once everything that we staged to Staging Area
 As you may already know, this is where we type in, in our all might terminal this command
 
 `git commit -m <messages>` (remember messages needs to be between two aphostrophe, as in "initial commit")
+
+<img src="./assets/git-commit_after_add.png" width="50%">
+
+**NB : gicmt is just another alias for git commit -m**
+<hr>
